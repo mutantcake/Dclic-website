@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'poppins';
+    background: linear-gradient(210.63deg, #FFE046 -89.75%, rgba(255, 224, 70, 0) 277.51%);
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 224, 70, 0);
+    position: absolute;
+    top: 0;
+}
+
+.navbar{
+    position: absolute;
+    padding:15px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(5px) ;
+    
+}
+
+.navbar a{
+    color: white;
+}
+
+.navbar .logo{
+    width: 200px;
+    border-radius: 10px;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li:hover a{
+    color: yellow;
+    font-weight: 600;
+}
+
+.menu-btn{
+    display: none;
+    width: 35px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+}
+
+.mobile-menu{
+    margin-left: 0 !important;
+
+}
+
+@media screen and (max-width:905px) {
+    .nav-links{
+        display: block;
+    }
+    
+    .menu-btn{
+        display: block;
+    }
+    
+    .nav-links{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+}
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+}
+
+    .section{
+    position: absolute;
+    width: 95%;
+    left: 50%;
+    margin-left: -47.5%;
+}
+
+    .section1{
+    position: absolute;
+    height: 785px;
+    top: 152px;
+
+    background: rgba(88, 75, 75, 0.67);
+}
+
+.section2{
+
+height: 785px;
+top: 1042px;
+
+background: rgba(255, 255, 255, 0.67);
+}
+
+.section3{
+width: 100%;
+margin-left: -50%;
+height: 830px;
+top: 1911px;
+
+background: #FFFFFF;
+}
+
+.sectionc{
+height: 785px;
+top: 152px;
+background: rgba(88, 75, 75, 0.67);
+border-radius: 10px;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    height: 250px;
+    margin-left: -50%;
+    top: 2741px;
+    
+    background: #373737;
+
+}
+
+.titc{
+position: absolute;
+width: 228px;
+height: 38px;
+left: 37px;
+top: 66px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 38px;
+
+
+color: #FFFFFF;
+}
+
+.con-trait{
+    position: absolute;
+    width: 400px;
+    height: 8px;
+    left: 272px;
+    top: 85px;
+    
+    background: #7CB937;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.carte{
+position: absolute;
+width: 45%;
+height: 590px;
+right: 30%;
+top: 133px;
+margin-right: 21%;
+
+background-image: url(img/carte.png);
+background-size: cover;
+border: 5px solid rgba(255, 255, 255, 0.7);
+border-radius: 10px;
+}
+
+.formcontact{
+
+position: absolute;
+width: 45%;
+height: 590px;
+left: 30%;
+top: 133px;
+margin-left: 21%;
+
+background: rgba(255, 255, 255, 0.7);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding-top: 35px;
+}
+
+.name{
+border: none;
+width: 80%;
+height: 54px;
+
+background: #FFFFFF;
+backdrop-filter: blur(2px);
+border-radius: 10px;
+}
+
+.mail{
+    border: none;
+    width: 80%;
+    height: 54px;
+    
+    background: #FFFFFF;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+}
+
+.msg{
+    border: none;
+    resize: none;
+    width: 80%;
+    height: 260px;
+
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.submit{
+color: #7CB937;
+border: none;
+width: 30%;
+height: 55px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 39px;
+
+background: #FFFFFF;
+backdrop-filter: blur(2px);
+border-radius: 10px;
+
+}
+
+::placeholder{
+    padding-left: 20px;
+}
+
+.barfoot{
+position: absolute;
+width: 95%;
+height: 0px;
+left: 52px;
+top: 30px;
+
+border: 3px solid #FFFFFF;
+
+}
+
+.elemfoot{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 300px;
+}
+
+.follow{
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+}
+
+.reach{
+    color: white;
+}
+
+.news{
+    color: white;
+}
+
+.newsm{
+color: #FFFFFF;
+width: 231px;
+height: 37px;
+left: 963px;
+top: 126px;
+
+background: rgba(255, 255, 255, 0.27);
+border: 3px solid #FFFFFF;
+border-radius: 10px;
+}
+
+.footb{
+text-align: center;
+padding-top: 30px;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+padding-right: 32px;
+
+color: #FFFFFF;
+
+}
+
+.appt{
+position: absolute;
+width: 237px;
+height: 38px;
+left: 23px;
+top: 67px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 38px;
+color: #FFFFFF;
+}
+
+.appl{
+position: absolute;
+width: 80%;
+height: 8px;
+left: 272px;
+top: 85px;
+
+background: #7CB937;
+}
+
+.contains1{
+margin-top: 140px;
+display: flex;
+justify-content: center;
+gap: 30px;
+}
+
+.pptxts1p1{
+width: 487px;
+height: 306px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 38px;
+
+color: #FFFFFF;
+}
+
+.pptxts1p2{
+width: 487px;
+height: 152px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 38px;
+
+color: #FFFFFF;
+
+}
+
+.s1img{
+box-sizing: border-box;
+width: 631px;
+height: 604px;
+
+background: url(img/s1img.png);
+background-size: cover;
+border: 10px solid #FFFFFF;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 10px;
+}
+
+.pptxts1{
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-content: end;
+}
+
+.appt2{
+position: absolute;
+width: 417px;
+height: 53px;
+left: 660px;
+top: 27px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 35px;
+line-height: 52px;
+color: #7CB937;
+
+}
+
+.appl2{
+position: absolute;
+width: 877px;
+height: 8px;
+left: 23px;
+top: 106px;
+background: #7CB937;
+}
+
+.pptxts2{
+width: 553px;
+height: 538px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 38px;
+
+color: #000000;
+}
+
+.sect2img1{
+width: 401px;
+height: 258px;
+background: url(img/sect2img1.png);
+background-size: cover;
+}
+
+.sect2img2{
+    width: 401px;
+    height: 230px;
+    background: url(img/sect2img2.png);
+    background-size: cover;
+}
+
+.temointit{
+position: absolute;
+width: 448px;
+height: 53px;
+left: 50%;
+top: 63px;
+margin-left: -224px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 35px;
+line-height: 52px;
+color: #7CB937;
+}
+
+.tiret1{
+    position: absolute;
+    width: 302px;
+    height: 21px;
+    left: 104px;
+    top: 80px;
+    background: #7CB937;
+}
+
+.tiret2{
+    position: absolute;
+    width: 302px;
+    height: 21px;
+    left: 1050px;
+    top: 80px;
+    background: #7CB937;
+}
+
+.temoin1{
+width: 483px;
+height: 637px;
+background: #7CB937;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.temoin2{
+    width: 483px;
+    height: 637px;
+    background: #7CB937;
+    border-radius: 10px;
+    }
+
+.temoin{
+    display: flex;
+    margin-top: 154px;
+    justify-content: center;
+    gap: 70px;
+}
+
+.imgt1{
+width: 483px;
+height: 293px;
+background: url(img/fillet.png);
+background-size: cover;
+margin-bottom: 2px;
+}
+
+.textm{
+width: 449px;
+height: 116px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 33px;
+
+color: #FFFFFF;
+}
+
+.textf{
+    width: 449px;
+    height: 146px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 00;
+    font-size: 25px;
+    line-height: 38px;
+    
+    color: #FFFFFF;
+    
+}
+
+.boutonf{
+width: 250px;
+height: 60px;
+background: #FFFFFF;
+border-radius: 10px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 38px;
+color: #7CB937;
+
+}
+
+    </style>
+
+
+<script>
+const menuHamburger = document.querySelector(".menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        });
+
+</script>
+    <title>D-Clic</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html"><img src="img/logo-dclic.jpg" alt="Logo D-clic" class="logo"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#a-propos">A propos de D-Clic</a> </li>
+                <li><a href="#cursus">Cursus de formations</a> </li>
+                <li><a href="#temoin">Temoignages</a> </li>
+                <li><a href="contact.html">Contact</a> </li>
+                <li><a href="#"><i class="fa fa-search"></i></a> </li>
+            </ul>
+        </div>
+        <img class="menu-btn menu-hb" src="img/menu-btn.png" alt="Menu" width="35">
+    </nav>
+    <header>
+    </header>
+    <div class="section section1">
+        <div class="appt" id="a-propos">À propos du projet</div>
+        <div class="appl"></div>
+        <div class="contains1">
+            <div class="pptxts1">
+                <div class="pptxts1p1">Pour renforcer les compétences numériques des jeunes de l’espace francophone et multiplier leurs chances d’accéder à des emplois décents, en entreprises et dans l’entreprenariat, l’OIF met en œuvre le programme « D-CLIC, formez-vous au numérique ».</div>
+                <div class="pptxts1p2"><span style="color: #FFE046;">54</span> États et gouvernements ciblés avec une attention particulière pour l’Afrique, 54 l’Asie-Pacifique, les Caraïbes et le Moyen-Orient</div>
+            </div>
+            <div class="s1img"></div>
+        </div>
+        
+    </div>
+
+    <div class="section section2">
+        <div class="appt2" id="cursus">CURSUS DE FORMATION</div>
+        <div class="appl2"></div>
+        <div class="contains1">
+            <div class="pptxts1">
+                <div class="sect2img1"><img src="s1img1.png" alt=""></div>
+                <div class="sect2img2"></div>   
+            </div>
+            <div class="pptxts2">A travers des opérateurs de formation reconnus et habilités à délivrer des certifications, des formations brèves, de 4 à 9 mois. Pour la phase pilote, centrée sur 14 pays (Burkina Faso, Congo RD, Côte d’Ivoire, Djibouti, Gabon, Haïti, Madagascar, Mali, Mauritanie, Niger, Sénégal, Tchad, Togo et Tunisie). <br><br>
+
+            <span style="color: #E73B42 ;">Les filières retenues concernent les familles de métiers de la communication, du marketing, de l’interface utilisateur et de la création numérique, notamment la conception et le développement.</span></div>
+        </div>
+
+    </div>
+
+    <div class="section section3">
+        <div class="tiret1"></div>
+        <div class="temointit" id="temoin">QUELQUES TEMOIGNAGES</div>
+        <div class="tiret2"></div>
+        <div class="temoin">
+            <div class="temoin1">
+                <div class="imgt1"></div>
+                <div class="textm">C’etais largement une formation au delà de mes attentes. Merci D-Clic !</div>
+                <div class="textf"><span style="font-size: xx-large; font-weight: bolder;">Alicia</span><br>
+                formée en développement Web à Madagascar.</div>
+                <div class=""><button class="boutonf">Regarder la vidéo</button></div>
+            </div>
+            <div class="temoin1">
+                <div class="imgt1" style="background-image: url(img/gars.png);"></div>
+                <div class="textm">Ça m’a permis de décrocher un emploi chez Microsoft. Merci D-Clic !</div>
+                <div class="textf"><span style="font-size: xx-large; font-weight: bolder;">Moussa</span><br>
+                formé en Cloud Computing au Burkina Faso.</div>
+                <div class=""><button class="boutonf">Regarder la vidéo</button></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="barfoot"></div>
+        <div class="elemfoot">
+            <div class="follow">
+                <div class="followmsg" style="color: #ffffff;">Suivez-nous !</div><br>
+                <div class="followicons" style="font-size:30px;"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i> <i class="fa-brands fa-instagram" style="color: #ffffff;"></i> <i class="fa-brands fa-facebook" style="color: #ffffff;"></i> <i class="fa-brands fa-youtube" style="color: #ffffff;"></i></div>
+            </div>
+            <div class="reach">
+                CONTACTEZ-NOUS <br> <br>
+                (+226)65101093
+            </div>
+            <div class="news">
+                ABONNEZ-VOUS <br>
+                <input class="newsm" type="email" name="" id="">
+            </div>
+        </div>
+        <div class="footb">Copyright 2023 D-Clic</div>
+    </footer>
+</body>
+</html>
