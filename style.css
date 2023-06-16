@@ -137,7 +137,7 @@ background: #FFFFFF;
 }
 
 .sectionc{
-height: 785px;
+height: 875px;
 top: 152px;
 background: rgba(88, 75, 75, 0.67);
 border-radius: 10px;
@@ -201,7 +201,7 @@ border-radius: 10px;
 
 position: absolute;
 width: 45%;
-height: 590px;
+height: 680px;
 left: 30%;
 top: 133px;
 margin-left: 21%;
@@ -266,6 +266,7 @@ line-height: 39px;
 background: #FFFFFF;
 backdrop-filter: blur(2px);
 border-radius: 10px;
+cursor: pointer;
 
 }
 
@@ -570,3 +571,16 @@ line-height: 38px;
 color: #7CB937;
 
 }
+
+form input {
+    padding: 15px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    outline: 0;
+  }
+form textarea {
+    padding: 15px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    outline: 0;
+  }
